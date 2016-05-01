@@ -18,10 +18,18 @@ class CreaturesController < ApplicationController
     creature = Creature.new(creature_params)
 
     # if creature saves, redirect to route that displays all creatures
-    if creature.saves
-      redirect_to creatures_path
+    if creature.save
+      redirect_to creature_path(creature)
       # redirect_to creatures_path is equivalent to:
       # redirect_to "/creatures"
     end
+  end
+  def show
+    #get creature by id, store in creature_id var
+    creature_id = params[:id]
+    #creating instance var in which store the found creature is stored
+    @creature = Creature.find_by_id(creature_id)
+    #render creature to page
+    render :show
   end
 end
