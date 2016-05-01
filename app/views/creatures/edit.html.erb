@@ -1,0 +1,7 @@
+<h1> Edit Creature Form: <%= @creature.name %> </h1>
+
+<%= form_for @creature do |f| %>
+  <%= f.text_field :name, placeholder: "creature name" %><br><br>
+  <%= f.text_area :description, placeholder: "creature description"%><br>
+  <%= f.submit "Save Creature"%>
+<% end %>
