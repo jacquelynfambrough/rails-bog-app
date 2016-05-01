@@ -20,9 +20,20 @@ class CreaturesController < ApplicationController
 
     #if creatures saves, redirecte to route that displays all creatures
     if creature.saves
-      redirect_to creatures_path
-      # redirect_to creatures_path is equivalent to redirect_to "/creatures"
+      redirect_to creature_path(creature)
+      # redirect_to creatures_path is equivalent to redirect_to "/creatures/#{creature.id}"
     end
   end
 
+  def show
+    #get the creature id from the url params
+    creature_id = params[:id]
+    #use "creature_id" to find the creature in the database
+    #and save it to an instance var
+    @creature = Creature.find_by_id(creature_id)
+
+    #render the show view (it has access to instance variable)
+    render :show
+
+  end
 end
