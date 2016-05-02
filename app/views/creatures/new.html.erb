@@ -1,0 +1,7 @@
+<h1> New Creature Form </h1>
+
+<%=form_for :creature, url:"/creatures", as:"creatures", method: "post" do |f| %>
+  <%= f.text_field :name, placeholder:"Creature Name", class: "form-control"%><br><br>
+  <%= f.text_area :description, placeholder: "Creature Description", class: "form-control" %>
+  <%= f.submit "Save Creature", class: "btn btn-primary"%>
+<% end %>
