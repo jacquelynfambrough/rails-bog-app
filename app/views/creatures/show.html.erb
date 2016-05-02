@@ -1,6 +1,9 @@
+<%= render "navbar" %>
+<body>
 <h1> <%= @creature.name %></h1> <br> <br>
 
 <p><%= @creature.description %></p>
 
-<%= link_to "Delete", @creature, method: "delete", class: "btn btn-success" %>
+<%= link_to "Delete", @creature, method: "delete", class: "btn btn-danger" %>
 <%= link_to "Edit Creature", edit_creature_path, class: "btn btn-primary"%>
+</body>
