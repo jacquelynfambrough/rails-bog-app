@@ -21,3 +21,4 @@ class CreaturesController < ApplicationController
     end
   end
 end
+ 
