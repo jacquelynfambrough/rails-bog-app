@@ -1,8 +1,11 @@
+<%= render "navbar" %>
 <h1> Creatures Index Page </h1>
 
 <% @creatures.each do |creature| %>
   <p>
     <b>Name:</b><%= creature.name %><br>
-    <b>Description: </b><%= creature.description %>
+    <b>Description: </b><%= creature.description %> <br>
+    <%= link_to "View this creature", creature_path(creature) %>
   </p>
+
 <% end %>
