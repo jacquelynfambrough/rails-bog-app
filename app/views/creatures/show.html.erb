@@ -2,5 +2,5 @@
 
 <p><%= @creature.description %></p>
 
-<%= button_to "Delete", @creature, method: "delete" %>
-<button><%= link_to "Edit Creature", edit_creature_path%></button>
+<%= link_to "Delete", @creature, method: "delete", class: "btn btn-success" %>
+<%= link_to "Edit Creature", edit_creature_path, class: "btn btn-primary"%>
