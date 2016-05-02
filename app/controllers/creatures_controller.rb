@@ -6,6 +6,7 @@ class CreaturesController < ApplicationController
     render :index
   end
   def new
+    @creature = Creature.new
     render :new
   end
   def create
@@ -21,4 +22,3 @@ class CreaturesController < ApplicationController
     end
   end
 end
- 
